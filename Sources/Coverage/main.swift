@@ -1,25 +1,7 @@
 import Foundation
 import Runner
 
-//let path = "/Users/sam/Library/Developer/Xcode/DerivedData/BookishModel-fmiwhpkahlvxvehgajbipuidfmec/Logs/Test/Test-BookishModelMac-2018.12.06_15-15-22-+0000.xcresult/1_Test/action.xccovreport"
-
-
-let path = "/Users/sam/Library/Developer/Xcode/DerivedData/BookishModel-fmiwhpkahlvxvehgajbipuidfmec/Logs/Test/Test-BookishModelMac-2018.12.06_15-15-22-+0000.xcresult"
-//let infoURL = URL(fileURLWithPath: path).appendingPathComponent("Info.plist")
-//if let info = NSDictionary(contentsOf: infoURL) {
-//    if let actions = info["Actions"] as? [[String:Any]] {
-//        for action in actions {
-//            if let result = action["ActionResult"] as? [String:Any] {
-//                if let coveragePath = result["CodeCoveragePath"] as? String {
-//                    print(coveragePath)
-//                }
-//            }
-//        }
-//    }
-//}
-
-
-func report(for url: URL, target: String? = nil) {
+func report(for url: URL, target filter: String? = nil, showFiles: Bool = false) {
     let xcrunURL = URL(fileURLWithPath: "/usr/bin/xcrun")
     let runner = Runner(for: xcrunURL)
     
@@ -27,17 +9,30 @@ func report(for url: URL, target: String? = nil) {
         let parser = Parser()
         if let report = parser.parse(result.stdout) {
             for target in report.targets {
-                print(target.name)
-                for file in target.files {
-                    print("- \(file.name)")
+                if (filter == nil) || (filter! == target.name) {
+                    if showFiles {
+                        for file in target.files {
+                            print("- \(file.name): \(file.lineCoverage)")
+                        }
+                    } else {
+                        print(target.lineCoverage)
+                    }
                 }
             }
         }
     }
 }
 
+guard CommandLine.argc >= 2 else {
+    fatalError("Usage: coverage <path-to-xcode-results> { <target> } { --showFiles }")
+}
+
+let path = CommandLine.arguments[1]
+let target: String? = CommandLine.argc > 2 ? CommandLine.arguments[2] : nil
+let showFiles = CommandLine.arguments.contains("--showFiles")
+
 let parser = XCodeResultParser()
 if let results = parser.parse(results: URL(fileURLWithPath: path)) {
-    report(for: results.coveragePath, target: "BookishModel")
+    report(for: results.coveragePath, target: target, showFiles: showFiles)
 }
 
