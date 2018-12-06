@@ -1,5 +1,6 @@
 import Foundation
 import Runner
+import Arguments
 
 func report(for url: URL, target filter: String? = nil, showFiles: Bool = false) {
     let xcrunURL = URL(fileURLWithPath: "/usr/bin/xcrun")
@@ -23,12 +24,24 @@ func report(for url: URL, target filter: String? = nil, showFiles: Bool = false)
     }
 }
 
-guard CommandLine.argc >= 2 else {
-    fatalError("Usage: coverage <path-to-xcode-results> { <target> } { --showFiles }")
-}
+let documentation = """
+Interpret XCode code coverage results.
 
-let path = CommandLine.arguments[1]
-let target: String? = CommandLine.argc > 2 ? CommandLine.arguments[2] : nil
+Usage:
+    coverage <results-path> [<target>] [--showFiles]
+
+Arguments:
+    <results-path>        Path to the xcode results file.
+
+    <target>              The target to produce output for. If this is missing, output is produced for all targets.
+
+Options:
+    --showFiles           Show coverage results for each file in the target(s).
+"""
+
+let a = Arguments(documentation: documentation, version: "1.0")
+let path = a.argument("results-path")
+let target = a.argument("target")
 let showFiles = CommandLine.arguments.contains("--showFiles")
 
 let parser = XCodeResultParser()

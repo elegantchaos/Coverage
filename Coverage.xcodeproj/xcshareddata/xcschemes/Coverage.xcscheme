@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      codeCoverageEnabled = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
@@ -64,15 +65,11 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "$(PROJECT_DIR)/Test.xcresult"
+            argument = "${PROJECT_DIR}/Test.xcresult"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "Coverage"
-            isEnabled = "YES">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "--showFiles"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
