@@ -27,7 +27,7 @@ struct Report: Decodable {
     let targets: [Target]
 }
 
-class Parser {
+class CodeCoverageParser {
     func parse(_ string: String) -> Report? {
         if let data = string.data(using: String.Encoding.utf8) {
             let decoder = JSONDecoder()
