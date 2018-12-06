@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "Coverage",
+    products: [
+        .executable(name: "coverage", targets: ["Coverage"]),
+        ],
     dependencies: [
         .package(url: "https://github.com/elegantchaos/Runner.git", from: "1.0.1"),
         .package(url: "https://github.com/elegantchaos/Arguments.git", from: "1.0.4"),

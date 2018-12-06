@@ -36,7 +36,7 @@ func report(for url: URL, target filter: String? = nil, showFiles: Bool = false,
                 if (filter == nil) || (filter! == target.name) {
                     if showFiles {
                         for file in target.files {
-                            print("- \(file.name): \(file.lineCoverage)")
+                            print("\(file.name): \(file.lineCoverage)")
                             if file.lineCoverage < threshold {
                                 status = .missedThreshold
                             }
