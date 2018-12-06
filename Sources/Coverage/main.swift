@@ -6,16 +6,27 @@ let documentation = """
 Interpret XCode code coverage results.
 
 Usage:
-  coverage <results-path> [<target>] [--showFiles] [--threshold=<amount>]
+    coverage <results-path> [<target>] [--showFiles] [--threshold=<amount>]
+    coverage --help
 
 Arguments:
-  <results-path>        Path to the xcode results file.
+    <results-path>        Path to the xcode results file.
 
-  <target>              The target to produce output for. If this is missing, output is produced for all targets.
+    <target>              The target to produce output for. If this is missing, output is produced for all targets.
 
 Options:
-  --showFiles           Show coverage results for each file in the target(s).
-  --threshold=<amount>  Tf coverage is below this threshold, we will return a non-zero error code.
+    --showFiles           Show coverage results for each file in the target(s).
+    --threshold=<amount>  Tf coverage is below this threshold, we will return a non-zero error code.
+
+Exit Status:
+
+    The coverage command exits with one of the following values:
+
+    0   If the arguments were ok and the threshold was met (or not specified).
+    1   If there was an error parsing the arguments.
+    2   If the threshold wasn't met.
+
+
 """
 
 enum ReturnCode: Int32 {
