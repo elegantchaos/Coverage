@@ -29,6 +29,24 @@ The coverage command exits with one of the following values:
 
 ```
 
+## Build
+
+Build using SPM:
+
+```
+swift build
+```
+
+Run from the build directory
+
+```
+.build/debug/coverage --help
+```
+
+Install by simply copying `.build/debug/coverage` elsewhere.
+
+
+
 ## Continuous Integration
 
 You can use this tool in continuous integration runs, to check that your coverage remains above a certain threshold.
@@ -36,7 +54,7 @@ You can use this tool in continuous integration runs, to check that your coverag
 For example, to test whether the coverage project itself has a coverage of over 80%, you might do:
 
 ```
-xcodebuild -workspace Coverage.xcworkspace -scheme Coverage -enableCodeCoverage YES test -resultBundlePath Test.xcresult
+xcodebuild test -workspace Coverage.xcworkspace -scheme Coverage -enableCodeCoverage YES -resultBundlePath Test.xcresult
 coverage Test.xcresult Coverage --threshold=0.8
 if [[ $? != 0 ]];
   echo "Coverage is below the threshold"
