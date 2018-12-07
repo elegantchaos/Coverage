@@ -65,11 +65,11 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "${PROJECT_DIR}/Test.xcresult"
+            argument = "/Users/sam/Projects/Bookish/Dependencies/BookishModel/Mac.xcresult"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "Coverage"
+            argument = "BookishModel.framework"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

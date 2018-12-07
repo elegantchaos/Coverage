@@ -35,7 +35,7 @@ enum ReturnCode: Int32 {
     case missedThreshold = 2
 }
 
-func report(for url: URL, target filter: String? = nil, showFiles: Bool = false, threshold: Double = 0) -> ReturnCode {
+func report(for url: URL, target filter: String = "", showFiles: Bool = false, threshold: Double = 0) -> ReturnCode {
     var status = ReturnCode.ok
     let xcrunURL = URL(fileURLWithPath: "/usr/bin/xcrun")
     let runner = Runner(for: xcrunURL)
@@ -43,8 +43,11 @@ func report(for url: URL, target filter: String? = nil, showFiles: Bool = false,
     if let result = try? runner.sync(arguments: ["xccov", "view", url.path, "--json"]), result.status == 0 {
         let parser = CodeCoverageParser()
         if let report = parser.parse(result.stdout) {
+            let noFilter = filter == ""
+            let showTargetNames = noFilter && report.targets.count > 1
             for target in report.targets {
-                if (filter == nil) || (filter! == target.name) {
+                let simpleName = URL(string: target.name)!.deletingPathExtension().path
+                if noFilter || (filter == simpleName) || (filter == target.name) {
                     if showFiles {
                         for file in target.files {
                             print("\(file.name): \(file.lineCoverage)")
@@ -53,7 +56,12 @@ func report(for url: URL, target filter: String? = nil, showFiles: Bool = false,
                             }
                         }
                     } else {
-                        print(target.lineCoverage)
+                        if showTargetNames {
+                            print("\(target.name): \(target.lineCoverage)")
+                        } else {
+                            print(target.lineCoverage)
+                        }
+
                         if target.lineCoverage < threshold {
                             status = .missedThreshold
                         }
