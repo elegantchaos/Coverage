@@ -1,0 +1,5 @@
+2018-12-06 17:18:15 +0000: Received worker from worker provider: 0x7f92dbe83e70 [0: My Mac (BBC8F655-C07F-58A3-97DB-099EE2623287)]
+2018-12-06 17:18:15 +0000: Worker 0x7f92dbe83e70 [19750: My Mac (BBC8F655-C07F-58A3-97DB-099EE2623287)] finished bootstrapping
+2018-12-06 17:18:15 +0000: Parallelization disabled; test execution driven by the test process
+2018-12-06 17:18:15 +0000: Worker 0x7f92dbe83e70 [19750: My Mac (BBC8F655-C07F-58A3-97DB-099EE2623287)] finished successfully
+2018-12-06 17:18:15 +0000: Finished executing tests (cancelled: No)

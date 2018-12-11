@@ -1,0 +1,16 @@
+17:18:15.372 xcodebuild[19733:5776912] Got socket for DTX-layer communication.
+
+17:18:15.373 xcodebuild[19733:5776912] XPC connection for control was invalidated.
+
+17:18:15.376 xcodebuild[19733:5776913] Initiating control session with controller protocol version 29
+
+17:18:15.377 xcodebuild[19733:5776952] Got reply to control session initiation request (result:error): 29: (null)
+
+17:18:15.377 xcodebuild[19733:5776952] Completed protocol exchange, test daemon is running v29.
+
+17:18:15.472 xcodebuild[19733:5776910] Got authorization request for pid 19750
+
+17:18:15.472 xcodebuild[19733:5776675] Requesting authorization for pid 19750
+
+17:18:15.473 xcodebuild[19733:5776675] Got reply to authorization request for pid 19750 (result:error): 1: (null)
+

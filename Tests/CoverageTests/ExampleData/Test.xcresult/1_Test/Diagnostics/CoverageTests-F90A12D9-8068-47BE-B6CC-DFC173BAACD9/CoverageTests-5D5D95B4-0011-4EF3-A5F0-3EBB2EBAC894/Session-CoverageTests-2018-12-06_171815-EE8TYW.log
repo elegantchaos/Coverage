@@ -1,0 +1,200 @@
+17:18:15.371 xcodebuild[19733:5776663] Beginning test session CoverageTests-BB6E0D25-A73F-4483-A221-FBF39E386280 at 2018-12-06 17:18:15.371 with Xcode 10B61 on target <DVTLocalComputer: 0x7f92dba64f50 (My Mac | x86_64h)> (10.14.1 (18B75))
+17:18:15.371 xcodebuild[19733:5776663] 	/Applications/Xcode10.1.app/Contents/Developer/usr/bin/xcodebuild
+-workspace
+Coverage.xcworkspace
+-scheme
+Coverage
+-enableCodeCoverage
+YES
+test
+-resultBundlePath
+Test.xcresult
+17:18:15.371 xcodebuild[19733:5776663] Launching with Xcode.IDEFoundation.Launcher.PosixSpawn
+17:18:15.372 xcodebuild[19733:5776663] Test standard output and standard error is at /Users/sam/Projects/Coverage/Test.xcresult/1_Test/Diagnostics/CoverageTests-F90A12D9-8068-47BE-B6CC-DFC173BAACD9/CoverageTests-5D5D95B4-0011-4EF3-A5F0-3EBB2EBAC894/StandardOutputAndStandardError.txt
+17:18:15.378 xcodebuild[19733:5776663] Setting up test runner session
+17:18:15.378 xcodebuild[19733:5776663] Requesting a socket for communication with testmanagerd.
+17:18:15.379 xcodebuild[19733:5776675] Got socket for DTX-layer communication.
+17:18:15.379 xcodebuild[19733:5776675] XPC connection for control was invalidated.
+17:18:15.379 xcodebuild[19733:5776913] Received connection for test runner session
+17:18:15.379 xcodebuild[19733:5776913] Listening for proxy connection request from the test bundle
+17:18:15.380 xcodebuild[19733:5776913] Initiating session with identifier: BB6E0D25-A73F-4483-A221-FBF39E386280
+17:18:15.381 xcodebuild[19733:5776663] Launch session started.
+17:18:15.381 xcodebuild[19733:5776676] Got reply to session initiation request with identifier BB6E0D25-A73F-4483-A221-FBF39E386280 (result:error): 29: (null)
+17:18:15.381 xcodebuild[19733:5776663] Test runner session acquired connection.
+17:18:15.381 xcodebuild[19733:5776663] Waiting for test process to launch.
+17:18:15.384 xcodebuild[19733:5776663] Test process runnable PID is 19750.
+17:18:15.472 xcodebuild[19733:5776675] Handling proxy channel request from test runner
+17:18:15.472 xcodebuild[19733:5776675] Test runner is ready, running protocol 29, requires at least version 7. Control framework is running 29 and requires at least 7
+17:18:15.472 xcodebuild[19733:5776663] Test runner session successfully initiated.
+17:18:15.472 xcodebuild[19733:5776663] Whitelisting test process ID 19750
+17:18:15.473 xcodebuild[19733:5776663] Got whitelisting response from test daemon: Success
+17:18:15.473 xcodebuild[19733:5776663] Registering/updating daemon-based crash report observer for process names (
+    xctest
+)
+17:18:15.473 xcodebuild[19733:5776663] Telling test runner to start executing tests.
+17:18:15.451 xctest[19750:5776956] Linked XCTest.framework from /Applications/Xcode10.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework/Versions/A/XCTest, built with Xcode 1010(10B46c), modified on Saturday, 20 October 2018 at 02:33:15 British Summer Time
+XCTest.framework bundle version: 14460.20
+17:18:15.452 xctest[19750:5776956] System uptime: 4d 21:38:17
+17:18:15.452 xctest[19750:5776956] Process arguments: (
+    "/Applications/Xcode10.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Xcode/Agents/xctest",
+    "/Users/sam/Projects/Coverage/Test.xcresult",
+    Coverage,
+    "-NSTreatUnknownArgumentsAsOpen",
+    NO,
+    "-ApplePersistenceIgnoreState",
+    YES
+)
+17:18:15.452 xctest[19750:5776956] Process environment: {
+    "Apple_PubSub_Socket_Render" = "/private/tmp/com.apple.launchd.joHqLxfHcT/Render";
+    "BASH_ENV" = "/Users/sam/.bashrc";
+    "BASH_HOOKS_INTERACTIVE" = 1;
+    "BASH_HOOKS_LOGIN" = 1;
+    "BASH_HOOKS_PLATFORM" = Darwin;
+    "BASH_HOOKS_RC" = 1;
+    "BASH_HOOKS_ROOT" = "/Users/sam/.local/share/bash-hooks";
+    "CA_ASSERT_MAIN_THREAD_TRANSACTIONS" = 0;
+    "CA_DEBUG_TRANSACTIONS" = 0;
+    CLICOLOR = "";
+    "COMPUTER_NAME" = "mistake-not";
+    "DYLD_FRAMEWORK_PATH" = "/Users/sam/Library/Developer/Xcode/DerivedData/Coverage-fxpwrdrkbakhvzfgertoyigcekxk/Build/Products/Debug:/Applications/Xcode10.1.app/Contents/SharedFrameworks::/Users/sam/Library/Developer/Xcode/DerivedData/Coverage-fxpwrdrkbakhvzfgertoyigcekxk/Build/Products/Debug:/Applications/Xcode10.1.app/Contents/SharedFrameworks:";
+    "DYLD_LIBRARY_PATH" = "/Users/sam/Library/Developer/Xcode/DerivedData/Coverage-fxpwrdrkbakhvzfgertoyigcekxk/Build/Products/Debug:/Users/sam/Library/Developer/Xcode/DerivedData/Coverage-fxpwrdrkbakhvzfgertoyigcekxk/Build/Products/Debug";
+    EDITOR = "/usr/local/bin/atom -w";
+    "EDITOR_NO_WAIT" = "/usr/local/bin/atom";
+    HISTCONTROL = ignoredups;
+    HISTFILESIZE = 32768;
+    HISTIGNORE = "ls:cd:cd -:pwd:exit:date:* --help";
+    HISTSIZE = 32768;
+    HOME = "/Users/sam";
+    "HOMEBREW_CASK_OPTS" = "--appdir=/Applications";
+    IDEiPhoneInternalTestBundleName = "CoverageTests.xctest";
+    LANG = "en_GB";
+    "LC_ALL" = "en_GB.UTF-8";
+    "LESS_TERMCAP_md" = "";
+    "LLVM_PROFILE_FILE" = "/var/folders/7w/d1fbwlnj2g98xnl7m8mrj4w80000gn/T/43544D6A-DA79-4EB8-B34C-6F27F3E7B090-19733-0001812B130F2AD2/D0EFF55F-9492-498D-8E3B-BC037117F0CD-%p.profraw%15x";
+    "LOCAL_NAME" = "mistake-not";
+    LOGNAME = sam;
+    LSCOLORS = xxcxxxdxhxbgedhbhgcxdx;
+    MANPAGER = "less -X";
+    "MTC_CRASH_ON_REPORT" = 1;
+    NSApplicationQuitWithoutSuddenTermination = YES;
+    NSUnbufferedIO = YES;
+    OLDPWD = "/Users/sam/Projects";
+    "OS_ACTIVITY_DT_MODE" = YES;
+    P4EDITOR = "/usr/local/bin/atom -w";
+    PATH = "/Applications/Xcode10.1.app/Contents/Developer/usr/bin:/usr/local/share/swift/default/usr/bin:.bin:/Users/sam/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin";
+    PWD = "/Users/sam/Projects/Coverage";
+    SECURITYSESSIONID = 186a8;
+    SHELL = "/bin/bash";
+    SHLVL = 1;
+    "SQLITE_ENABLE_THREAD_ASSERTIONS" = 1;
+    "SSH_AUTH_SOCK" = "/private/tmp/com.apple.launchd.j3ORi1cIIF/Listeners";
+    "SVN_EDITOR" = "/usr/local/bin/atom -w";
+    TERM = "xterm-256color";
+    "TERM_PROGRAM" = "Apple_Terminal";
+    "TERM_PROGRAM_VERSION" = "421.1";
+    "TERM_SESSION_ID" = "A386C7B8-9B10-4A16-B76A-460DB956CCEB";
+    TMPDIR = "/var/folders/7w/d1fbwlnj2g98xnl7m8mrj4w80000gn/T/";
+    USER = sam;
+    XCTestConfigurationFilePath = "/Users/sam/Projects/Coverage/Test.xcresult/1_Test/Diagnostics/CoverageTests-F90A12D9-8068-47BE-B6CC-DFC173BAACD9/CoverageTests-5D5D95B4-0011-4EF3-A5F0-3EBB2EBAC894/LaunchSessions/BB6E0D25-A73F-4483-A221-FBF39E386280/remote-container/tmp/CoverageTests-BB6E0D25-A73F-4483-A221-FBF39E386280.xctestconfiguration";
+    "XPC_FLAGS" = 0x0;
+    "XPC_SERVICE_NAME" = 0;
+    "_" = "/usr/bin/xcodebuild";
+    "__CF_USER_TEXT_ENCODING" = "0x1F5:0x0:0x2";
+    "__XCODE_BUILT_PRODUCTS_DIR_PATHS" = "/Users/sam/Library/Developer/Xcode/DerivedData/Coverage-fxpwrdrkbakhvzfgertoyigcekxk/Build/Products/Debug";
+    "__XPC_DYLD_FRAMEWORK_PATH" = "/Users/sam/Library/Developer/Xcode/DerivedData/Coverage-fxpwrdrkbakhvzfgertoyigcekxk/Build/Products/Debug:/Users/sam/Library/Developer/Xcode/DerivedData/Coverage-fxpwrdrkbakhvzfgertoyigcekxk/Build/Products/Debug";
+    "__XPC_DYLD_LIBRARY_PATH" = "/Users/sam/Library/Developer/Xcode/DerivedData/Coverage-fxpwrdrkbakhvzfgertoyigcekxk/Build/Products/Debug:/Users/sam/Library/Developer/Xcode/DerivedData/Coverage-fxpwrdrkbakhvzfgertoyigcekxk/Build/Products/Debug";
+    "__XPC_LLVM_PROFILE_FILE" = "/var/folders/7w/d1fbwlnj2g98xnl7m8mrj4w80000gn/T/43544D6A-DA79-4EB8-B34C-6F27F3E7B090-19733-0001812B130F2AD2/D0EFF55F-9492-498D-8E3B-BC037117F0CD-%p.profraw%15x";
+}
+17:18:15.452 xctest[19750:5776956] App Sandbox active: NO
+17:18:15.452 xctest[19750:5776956] Loading test bundle at: file:///Users/sam/Library/Developer/Xcode/DerivedData/Coverage-fxpwrdrkbakhvzfgertoyigcekxk/Build/Products/Debug/CoverageTests.xctest/
+17:18:15.466 xctest[19750:5776956] Finished loading test bundle
+17:18:15.466 xctest[19750:5776956] Readying IDE session
+17:18:15.467 xctest[19750:5776956] Creating future for 'Exchange protocol versions with daemon' with timeout 15.00
+17:18:15.467 xctest[19750:5776956] <XCTWaiter: 0x7f949b001d60, state: XCTWaiterStateInProgress> entering wait loop for 15.00s with expectations: `Exchange protocol versions with daemon`
+17:18:15.470 xctest[19750:5776961] <XCTWaiter: 0x7f949b001d60, state: XCTWaiterStateSucceeded>: cancelWaiting
+17:18:15.470 xctest[19750:5776956] <XCTWaiter: 0x7f949b001d60, state: XCTWaiterStateSucceeded> done waiting
+17:18:15.470 xctest[19750:5776956] Canceling watchdog for <XCTWaiter: 0x7f949b001d60, state: XCTWaiterStateInProgress>.
+17:18:15.470 xctest[19750:5776956] <XCTWaiter: 0x7f949b001d60, state: XCTWaiterStateSucceeded> cleaning up `Exchange protocol versions with daemon`
+17:18:15.470 xctest[19750:5776956] Got daemon protocol version 26
+17:18:15.470 xctest[19750:5776956] Requesting IDE connection transport
+17:18:15.471 xctest[19750:5776961] Creating transport with received transport data
+17:18:15.471 xctest[19750:5776956] <XCTWaiter: 0x7f949b009830, state: XCTWaiterStateInProgress> entering wait loop for 60.00s with expectations: `Transport for IDE session acquired`
+17:18:15.471 xctest[19750:5776961] <XCTWaiter: 0x7f949b009830, state: XCTWaiterStateSucceeded>: cancelWaiting
+17:18:15.471 xctest[19750:5776956] <XCTWaiter: 0x7f949b009830, state: XCTWaiterStateSucceeded> done waiting
+17:18:15.471 xctest[19750:5776956] Canceling watchdog for <XCTWaiter: 0x7f949b009830, state: XCTWaiterStateInProgress>.
+17:18:15.471 xctest[19750:5776956] <XCTWaiter: 0x7f949b009830, state: XCTWaiterStateSucceeded> cleaning up `Transport for IDE session acquired`
+17:18:15.471 xctest[19750:5776956] Creating connection with transport <DTXFileDescriptorTransport: 0x7f9499c14ff0>
+17:18:15.471 xctest[19750:5776956] Creating the proxy channel with connection <DTXConnection 0x7f9499c15760 : x1>
+17:18:15.471 xctest[19750:5776956] Creating future for 'IDE session ready for test plan' with timeout 60.00
+17:18:15.471 xctest[19750:5776956] Messaging IDE proxy - _XCT_testBundleReadyWithProtocolVersion:29 minimumVersion:7
+17:18:15.472 xctest[19750:5776956] <XCTWaiter: 0x7f9499c196a0, state: XCTWaiterStateInProgress> entering wait loop for 60.00s with expectations: `IDE session ready for test plan`
+17:18:15.472 xctest[19750:5776961] _XCT_testBundleReadyWithProtocolVersion:minimumVersion: reply received
+17:18:15.473 xctest[19750:5776960] _IDE_startExecutingTestPlanWithProtocolVersion:29
+17:18:15.473 xctest[19750:5776960] <XCTWaiter: 0x7f9499c196a0, state: XCTWaiterStateSucceeded>: cancelWaiting
+17:18:15.474 xctest[19750:5776956] <XCTWaiter: 0x7f9499c196a0, state: XCTWaiterStateSucceeded> done waiting
+17:18:15.474 xctest[19750:5776956] Canceling watchdog for <XCTWaiter: 0x7f9499c196a0, state: XCTWaiterStateInProgress>.
+17:18:15.474 xctest[19750:5776956] <XCTWaiter: 0x7f9499c196a0, state: XCTWaiterStateSucceeded> cleaning up `IDE session ready for test plan`
+17:18:15.476 xcodebuild[19733:5776663] Starting test plan, clearing initialization timeout timer.
+17:18:15.476 xctest[19750:5776956] Entering test execution event loop
+17:18:15.476 xctest[19750:5776956] -[XCTRunnerIDESession testBundleWillStart:]
+17:18:15.476 xctest[19750:5776956] Loading test suite...
+17:18:15.482 xctest[19750:5776956] Finished loading test suite, took 0.006s
+Test Suite 'All tests' started at 2018-12-06 17:18:15.482
+Test Suite 'CoverageTests.xctest' started at 2018-12-06 17:18:15.482
+17:18:15.482 xctest[19750:5776956] Running suite...
+17:18:15.482 xctest[19750:5776956] -[XCTRunnerIDESession testSuiteWillStart:]
+17:18:15.483 xcodebuild[19733:5776663] _XCT_testSuite:All tests didStartAt:2018-12-06 17:18:15 +0000
+17:18:15.483 xcodebuild[19733:5776663] _XCT_testSuite:CoverageTests.xctest didStartAt:2018-12-06 17:18:15 +0000
+17:18:15.482 xctest[19750:5776956] -[XCTRunnerIDESession testSuiteWillStart:]
+17:18:15.483 xctest[19750:5776956] -[XCTRunnerIDESession testSuiteWillStart:]
+17:18:15.483 xcodebuild[19733:5776663] _XCT_testSuite:CoverageTests didStartAt:2018-12-06 17:18:15 +0000
+Test Suite 'CoverageTests' started at 2018-12-06 17:18:15.483
+Test Case '-[CoverageTests.CoverageTests testExample]' started.
+17:18:15.484 xcodebuild[19733:5776663] _XCT_testCaseDidStartForTestClass:CoverageTests.CoverageTests method:testExample
+17:18:15.483 xctest[19750:5776956] -[XCTRunnerIDESession testCaseWillStart:] CoverageTests.CoverageTests testExample
+/Users/sam/Projects/Coverage/Tests/CoverageTests/CoverageTests.swift:29: error: -[CoverageTests.CoverageTests testExample] : XCTAssertEqual failed: ("Optional("Usage:\n  coverage <results-path> [<target>] [--showFiles] [--threshold=<amount>]\n")") is not equal to ("Optional("Hello, world!\n")") - 
+17:18:15.636 xctest[19750:5776956] -[XCTRunnerIDESession testCase:didFailWithDescription:inFile:atLine:]
+17:18:15.637 xcodebuild[19733:5776663] _XCT_testCaseDidFailForTestClass:CoverageTests.CoverageTests method:testExample withMessage:XCTAssertEqual failed: ("Optional("Usage:\n  coverage <results-path> [<target>] [--showFiles] [--threshold=<amount>]\n")") is not equal to ("Optional("Hello, world!\n")") -  file:/Users/sam/Projects/Coverage/Tests/CoverageTests/CoverageTests.swift line:29
+17:18:15.637 xctest[19750:5776956] -[CoverageTests testExample] started activity <XCActivityRecord: 0x7f949b462250> 2018-12-06 17:18:15 +0000: Assertion Failure: CoverageTests.swift:29: XCTAssertEqual failed: ("Optional("Usage:\n  coverage <results-path> [<target>] [--showFiles] [--threshold=<amount>]\n")") is not equal to ("Optional("Hello, world!\n")") - 
+17:18:15.638 xcodebuild[19733:5776663] -[CoverageTests.CoverageTests testExample] will start activity F44BDCB6-0916-4A1C-A1F6-EACF74000B96:'Assertion Failure: CoverageTests.swift:29: XCTAssertEqual failed: ("Optional("Usage:\n  coverage <results-path> [<target>] [--showFiles] [--threshold=<amount>]\n")") is not equal to ("Optional("Hello, world!\n")") - '
+17:18:15.637 xctest[19750:5776956] -[CoverageTests testExample] finished activity <XCActivityRecord: 0x7f949b462250> 2018-12-06 17:18:15 +0000: Assertion Failure: CoverageTests.swift:29: XCTAssertEqual failed: ("Optional("Usage:\n  coverage <results-path> [<target>] [--showFiles] [--threshold=<amount>]\n")") is not equal to ("Optional("Hello, world!\n")") -  (0.000730991s)
+17:18:15.638 xcodebuild[19733:5776663] -[CoverageTests.CoverageTests testExample] did finish activity F44BDCB6-0916-4A1C-A1F6-EACF74000B96:'Assertion Failure: CoverageTests.swift:29: XCTAssertEqual failed: ("Optional("Usage:\n  coverage <results-path> [<target>] [--showFiles] [--threshold=<amount>]\n")") is not equal to ("Optional("Hello, world!\n")") - '
+Test Case '-[CoverageTests.CoverageTests testExample]' failed (0.155 seconds).
+17:18:15.638 xctest[19750:5776956] -[XCTRunnerIDESession testCaseDidFinish:]
+17:18:15.639 xcodebuild[19733:5776663] _XCT_testCaseDidFinishForTestClass:CoverageTests.CoverageTests method:testExample withStatus:failed duration:0.1554620265960693
+17:18:15.639 xctest[19750:5776956] -[XCTRunnerIDESession testSuiteDidFinish:]
+Test Suite 'CoverageTests' failed at 2018-12-06 17:18:15.639.
+	 Executed 1 test, with 1 failure (0 unexpected) in 0.155 (0.156) seconds
+17:18:15.640 xcodebuild[19733:5776663] _XCT_testSuite:CoverageTests didFinishAt:2018-12-06 17:18:15 +0000 runCount:1 withFailures:1 unexpected:0 testDuration:0.1554620265960693 totalDuration:0.1560760736465454
+17:18:15.639 xctest[19750:5776956] Activity statistics for CoverageTests:
+17:18:15.639 xctest[19750:5776956] 0.00s : Other
+Test Suite 'CoverageTests.xctest' failed at 2018-12-06 17:18:15.639.
+	 Executed 1 test, with 1 failure (0 unexpected) in 0.155 (0.157) seconds
+Test Suite 'All tests' failed at 2018-12-06 17:18:15.640.
+	 Executed 1 test, with 1 failure (0 unexpected) in 0.155 (0.158) seconds
+17:18:15.639 xctest[19750:5776956] Total time in activities: 0.00s
+17:18:15.639 xctest[19750:5776956] -[XCTRunnerIDESession testSuiteDidFinish:]
+17:18:15.642 xcodebuild[19733:5776663] _XCT_testSuite:CoverageTests.xctest didFinishAt:2018-12-06 17:18:15 +0000 runCount:1 withFailures:1 unexpected:0 testDuration:0.1554620265960693 totalDuration:0.1568779945373535
+17:18:15.640 xctest[19750:5776956] Activity statistics for CoverageTests.xctest:
+17:18:15.640 xctest[19750:5776956] 0.00s : Other
+17:18:15.640 xctest[19750:5776956] Total time in activities: 0.00s
+17:18:15.642 xcodebuild[19733:5776663] _XCT_testSuite:All tests didFinishAt:2018-12-06 17:18:15 +0000 runCount:1 withFailures:1 unexpected:0 testDuration:0.1554620265960693 totalDuration:0.1580599546432495
+17:18:15.640 xctest[19750:5776956] -[XCTRunnerIDESession testSuiteDidFinish:]
+17:18:15.640 xctest[19750:5776956] Activity statistics for All tests:
+17:18:15.640 xctest[19750:5776956] 0.00s : Other
+17:18:15.642 xcodebuild[19733:5776663] -[XCTTestRunnerSession _XCT_didFinishExecutingTestPlan]_block_invoke
+17:18:15.641 xctest[19750:5776956] Total time in activities: 0.00s
+17:18:15.641 xctest[19750:5776956] Finished running suite.
+17:18:15.641 xctest[19750:5776956] -[XCTRunnerIDESession testBundleDidFinish:], Flushing connection to IDE...
+17:18:15.641 xctest[19750:5776956] Exited test execution event loop
+17:18:15.641 xctest[19750:5776956] Calling completion.
+17:18:15.641 xctest[19750:5776956] <XCTWaiter: 0x7f9499c307a0, state: XCTWaiterStateInProgress> entering wait loop for 15.00s with expectations: `IDE confirmed the end of session`
+17:18:15.642 xctest[19750:5776961] <XCTWaiter: 0x7f9499c307a0, state: XCTWaiterStateSucceeded>: cancelWaiting
+17:18:15.642 xctest[19750:5776956] <XCTWaiter: 0x7f9499c307a0, state: XCTWaiterStateSucceeded> done waiting
+17:18:15.642 xctest[19750:5776956] Canceling watchdog for <XCTWaiter: 0x7f9499c307a0, state: XCTWaiterStateInProgress>.
+17:18:15.642 xctest[19750:5776956] <XCTWaiter: 0x7f9499c307a0, state: XCTWaiterStateSucceeded> cleaning up `IDE confirmed the end of session`
+17:18:15.646 xcodebuild[19733:5776953] Socket transport for DTX-layer communication disconnected.
+17:18:15.646 xcodebuild[19733:5776663] Test process exited with exit code 1
+17:18:15.900 xcodebuild[19733:5776663] <IDETestOperationCoordinator: 0x7f92db8a1380> finished receiving data from testing launch session
+17:18:15.900 xcodebuild[19733:5776663] <IDETestOperationCoordinator: 0x7f92db8a1380>: _considerFlushingDelegateBlockQueue - nothing to flush
+17:18:15.901 xcodebuild[19733:5776663] _finishWithError:(null)

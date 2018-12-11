@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>FormatVersion</key>
+	<string>1.1</string>
+	<key>TestableSummaries</key>
+	<array>
+		<dict>
+			<key>DiagnosticsDirectory</key>
+			<string>CoverageTests-F90A12D9-8068-47BE-B6CC-DFC173BAACD9</string>
+			<key>ProjectPath</key>
+			<string>Coverage.xcodeproj</string>
+			<key>TargetName</key>
+			<string>CoverageTests</string>
+			<key>TestKind</key>
+			<string>xctest-tool hosted</string>
+			<key>TestName</key>
+			<string>CoverageTests</string>
+			<key>TestObjectClass</key>
+			<string>IDESchemeActionTestableSummary</string>
+			<key>Tests</key>
+			<array>
+				<dict>
+					<key>Duration</key>
+					<real>0.15805995464324951</real>
+					<key>Subtests</key>
+					<array>
+						<dict>
+							<key>Duration</key>
+							<real>0.15687799453735352</real>
+							<key>Subtests</key>
+							<array>
+								<dict>
+									<key>Duration</key>
+									<real>0.15607607364654541</real>
+									<key>Subtests</key>
+									<array>
+										<dict>
+											<key>ActivitySummaries</key>
+											<array>
+												<dict>
+													<key>ActivityType</key>
+													<string>com.apple.dt.xctest.activity-type.testAssertionFailure</string>
+													<key>FinishTimeInterval</key>
+													<real>565809495.637218</real>
+													<key>StartTimeInterval</key>
+													<real>565809495.63648701</real>
+													<key>Title</key>
+													<string>Assertion Failure: CoverageTests.swift:29: XCTAssertEqual failed: ("Optional("Usage:\n  coverage &lt;results-path&gt; [&lt;target&gt;] [--showFiles] [--threshold=&lt;amount&gt;]\n")") is not equal to ("Optional("Hello, world!\n")") - </string>
+													<key>UUID</key>
+													<string>F44BDCB6-0916-4A1C-A1F6-EACF74000B96</string>
+												</dict>
+											</array>
+											<key>Duration</key>
+											<real>0.15546202659606934</real>
+											<key>FailureSummaries</key>
+											<array>
+												<dict>
+													<key>FileName</key>
+													<string>/Users/sam/Projects/Coverage/Tests/CoverageTests/CoverageTests.swift</string>
+													<key>LineNumber</key>
+													<integer>29</integer>
+													<key>Message</key>
+													<string>XCTAssertEqual failed: ("Optional("Usage:\n  coverage &lt;results-path&gt; [&lt;target&gt;] [--showFiles] [--threshold=&lt;amount&gt;]\n")") is not equal to ("Optional("Hello, world!\n")") - </string>
+													<key>PerformanceFailure</key>
+													<false/>
+												</dict>
+											</array>
+											<key>TestIdentifier</key>
+											<string>CoverageTests/testExample()</string>
+											<key>TestName</key>
+											<string>testExample()</string>
+											<key>TestObjectClass</key>
+											<string>IDESchemeActionTestSummary</string>
+											<key>TestStatus</key>
+											<string>Failure</string>
+											<key>TestSummaryGUID</key>
+											<string>BEE87AF3-0949-4814-B53A-14BE30AAD040</string>
+										</dict>
+									</array>
+									<key>TestIdentifier</key>
+									<string>CoverageTests</string>
+									<key>TestName</key>
+									<string>CoverageTests</string>
+									<key>TestObjectClass</key>
+									<string>IDESchemeActionTestSummaryGroup</string>
+								</dict>
+							</array>
+							<key>TestIdentifier</key>
+							<string>CoverageTests.xctest</string>
+							<key>TestName</key>
+							<string>CoverageTests.xctest</string>
+							<key>TestObjectClass</key>
+							<string>IDESchemeActionTestSummaryGroup</string>
+						</dict>
+					</array>
+					<key>TestIdentifier</key>
+					<string>All tests</string>
+					<key>TestName</key>
+					<string>All tests</string>
+					<key>TestObjectClass</key>
+					<string>IDESchemeActionTestSummaryGroup</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

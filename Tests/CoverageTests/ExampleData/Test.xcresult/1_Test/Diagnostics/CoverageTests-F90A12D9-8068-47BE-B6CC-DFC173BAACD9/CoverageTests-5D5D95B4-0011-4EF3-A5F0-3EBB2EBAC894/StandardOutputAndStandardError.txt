@@ -1,0 +1,17 @@
+Test Suite 'All tests' started at 2018-12-06 17:18:15.482
+Test Suite 'CoverageTests.xctest' started at 2018-12-06 17:18:15.482
+Test Suite 'CoverageTests' started at 2018-12-06 17:18:15.483
+Test Case '-[CoverageTests.CoverageTests testExample]' started.
+/Users/sam/Projects/Coverage/Tests/CoverageTests/CoverageTests.swift:29: error: -[CoverageTests.CoverageTests testExample] : XCTAssertEqual failed: ("Optional("Usage:\n  coverage <results-path> [<target>] [--showFiles] [--threshold=<amount>]\n")") is not equal to ("Optional("Hello, world!\n")") - 
+Test Case '-[CoverageTests.CoverageTests testExample]' failed (0.155 seconds).
+Test Suite 'CoverageTests' failed at 2018-12-06 17:18:15.639.
+	 Executed 1 test, with 1 failure (0 unexpected) in 0.155 (0.156) seconds
+Test Suite 'CoverageTests.xctest' failed at 2018-12-06 17:18:15.639.
+	 Executed 1 test, with 1 failure (0 unexpected) in 0.155 (0.157) seconds
+Test Suite 'All tests' failed at 2018-12-06 17:18:15.640.
+	 Executed 1 test, with 1 failure (0 unexpected) in 0.155 (0.158) seconds
+
+
+Test session results and logs:
+	/Users/sam/Projects/Coverage/Test.xcresult
+
