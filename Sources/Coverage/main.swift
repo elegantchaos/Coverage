@@ -32,8 +32,8 @@ Exit Status:
 
 enum ReturnCode: Int32 {
     case ok = 0
-    case badArguments = 1
-    case missedThreshold = 2
+    case badArguments = 100
+    case missedThreshold = 101
 }
 
 func report(for url: URL, target filter: String = "", showFiles: Bool = false, showTargets: Bool = false, threshold: Double = 0) -> ReturnCode {

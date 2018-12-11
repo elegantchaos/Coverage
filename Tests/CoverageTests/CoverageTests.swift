@@ -3,14 +3,14 @@ import class Foundation.Bundle
 
 final class CoverageTests: XCTestCase {
     
-    func runCoverage(_ extraArguments: [String]) throws -> String? {
+    func runCoverage(_ extraArguments: [String], results: URL? = nil) throws -> (Int32, String?) {
         guard #available(macOS 10.13, *) else {
-            return nil
+            return (0, nil)
         }
         
         let products = productsDirectory
         let fooBinary = products.appendingPathComponent("coverage")
-        var arguments = [exampleResults.path]
+        var arguments = [results?.path ?? exampleResults.path]
         arguments.append(contentsOf: extraArguments)
 
         let process = Process()
@@ -24,7 +24,7 @@ final class CoverageTests: XCTestCase {
         
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
         let output = String(data: data, encoding: .utf8)
-        return output
+        return (process.terminationStatus, output)
     }
 
     var exampleResults: URL {
@@ -42,13 +42,26 @@ final class CoverageTests: XCTestCase {
         #endif
     }
 
+    func testBadArgs() throws {
+        let (status, _) = try runCoverage(["Coverage", "Bad Argument"])
+        XCTAssertEqual(status, 2)
+    }
+
+    func testMissingResults() throws {
+        let (status, _) = try runCoverage(["Coverage"], results: URL(fileURLWithPath: "/"))
+        XCTAssertEqual(status, )
+    }
+    
+
     func testFailingThreshold() throws {
-        let output = try runCoverage(["Coverage", "--threshold=0.5"])
+        let (status, output) = try runCoverage(["Coverage", "--threshold=0.5"])
+        XCTAssertEqual(status, 101)
         XCTAssertEqual(output, "Target Coverage misses the coverage threshold of 50% with 18%.\n")
     }
     
     func testPassingThreshold() throws {
-        let output = try runCoverage(["Coverage", "--threshold=0.1"])
+        let (status, output) = try runCoverage(["Coverage", "--threshold=0.1"])
+        XCTAssertEqual(status, 0)
         XCTAssertEqual(output, "Target Coverage passes the coverage threshold of 10% with 18%.\n")
     }
 
