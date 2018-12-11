@@ -6,7 +6,7 @@ let documentation = """
 Interpret XCode code coverage results.
 
 Usage:
-    coverage <results-path> [<target>] [--showFiles] [--threshold=<amount>]
+    coverage <results-path> [<target>] [--printFiles] [--printTargets] [--threshold=<amount>]
     coverage --help
 
 Arguments:
@@ -15,7 +15,8 @@ Arguments:
     <target>              The target to produce output for. If this is missing, output is produced for all targets.
 
 Options:
-    --showFiles           Show coverage results for each file in the target(s).
+    --printFiles          Print coverage results for each file in the target(s).
+    --printTargets        Print coverage results for the target(s).
     --threshold=<amount>  Tf coverage is below this threshold, we will return a non-zero error code.
 
 Exit Status:
@@ -35,7 +36,7 @@ enum ReturnCode: Int32 {
     case missedThreshold = 2
 }
 
-func report(for url: URL, target filter: String = "", showFiles: Bool = false, threshold: Double = 0) -> ReturnCode {
+func report(for url: URL, target filter: String = "", showFiles: Bool = false, showTargets: Bool = false, threshold: Double = 0) -> ReturnCode {
     var status = ReturnCode.ok
     let xcrunURL = URL(fileURLWithPath: "/usr/bin/xcrun")
     let runner = Runner(for: xcrunURL)
@@ -44,45 +45,62 @@ func report(for url: URL, target filter: String = "", showFiles: Bool = false, t
         let parser = CodeCoverageParser()
         if let report = parser.parse(result.stdout) {
             let noFilter = filter == ""
-            let showTargetNames = noFilter && report.targets.count > 1
+            var matchedFilter = false
             for target in report.targets {
                 let simpleName = URL(string: target.name)!.deletingPathExtension().path
                 if noFilter || (filter == simpleName) || (filter == target.name) {
+                    matchedFilter = true
+                    if showTargets {
+                        print("\n\(target.name): \(target.lineCoverage)")
+                    }
+
+                    let thresholdPC = Int(threshold * 100.0)
                     if showFiles {
                         for file in target.files {
-                            print("\(file.name): \(file.lineCoverage)")
+                            let indent = showTargets ? "- " : ""
+                            print("\(indent)\(file.name): \(file.lineCoverage)")
                             if file.lineCoverage < threshold {
                                 status = .missedThreshold
+                                let targetPC = Int(file.lineCoverage * 100.0)
+                                print("File \(file.name) misses the coverage threshold of \(thresholdPC)% with \(targetPC)%.")
                             }
                         }
                     } else {
-                        if showTargetNames {
-                            print("\(target.name): \(target.lineCoverage)")
-                        } else {
-                            print(target.lineCoverage)
-                        }
 
+                        let targetPC = Int(target.lineCoverage * 100.0)
                         if target.lineCoverage < threshold {
                             status = .missedThreshold
+                            print("Target \(simpleName) misses the coverage threshold of \(thresholdPC)% with \(targetPC)%.")
+                        } else if threshold > 0 {
+                            print("Target \(simpleName) passes the coverage threshold of \(thresholdPC)% with \(targetPC)%.")
                         }
                     }
                 }
             }
+            if !matchedFilter {
+                if noFilter {
+                    print ("Failed to find any targets.")
+                } else {
+                    print("Failed to find target \(filter).")
+                }
+            }
         }
     }
+    
     return status
 }
 
 let a = Arguments(documentation: documentation, version: "1.0")
 let path = a.argument("results-path")
 let target = a.argument("target")
-let showFiles = a.flag("showFiles")
+let showFiles = a.flag("printFiles")
+let showTargets = a.flag("printTargets")
 let thresholdString = a.option("threshold") ?? "0"
 let threshold = (thresholdString as NSString).doubleValue
 let parser = XCodeResultParser()
 let result: ReturnCode
 if let results = parser.parse(results: URL(fileURLWithPath: path)) {
-    result = report(for: results.coveragePath, target: target, showFiles: showFiles, threshold: threshold)
+    result = report(for: results.coveragePath, target: target, showFiles: showFiles, showTargets: showTargets, threshold: threshold)
 } else {
     result = .badArguments
 }
