@@ -193,7 +193,7 @@
             "en"
          );
          mainGroup = "OBJ_5";
-         productRefGroup = "OBJ_55";
+         productRefGroup = "OBJ_56";
          projectDirPath = ".";
          targets = (
             "Arguments::Arguments",
@@ -797,7 +797,7 @@
             "OBJ_17",
             "OBJ_21",
             "OBJ_39",
-            "OBJ_51"
+            "OBJ_52"
          );
          name = "Dependencies";
          path = "";
@@ -851,7 +851,7 @@
             "OBJ_18",
             "OBJ_20"
          );
-         name = "Arguments";
+         name = "Arguments 1.0.7";
          path = "";
          sourceTree = "SOURCE_ROOT";
       };
@@ -899,7 +899,7 @@
       };
       "OBJ_173" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_50";
+         fileRef = "OBJ_51";
       };
       "OBJ_174" = {
          isa = "XCConfigurationList";
@@ -992,7 +992,7 @@
       };
       "OBJ_178" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_53";
+         fileRef = "OBJ_54";
       };
       "OBJ_179" = {
          isa = "PBXFrameworksBuildPhase";
@@ -1005,7 +1005,7 @@
             "OBJ_19"
          );
          name = "Arguments";
-         path = "Packages/Arguments/Sources/Arguments";
+         path = ".build/checkouts/Arguments/Sources/Arguments";
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_181" = {
@@ -1061,7 +1061,7 @@
       };
       "OBJ_185" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_54";
+         fileRef = "OBJ_55";
       };
       "OBJ_187" = {
          isa = "XCConfigurationList";
@@ -1106,7 +1106,7 @@
          isa = "PBXFileReference";
          explicitFileType = "sourcecode.swift";
          name = "Package.swift";
-         path = "/Users/sam/Projects/Coverage/Packages/Arguments/Package.swift";
+         path = "/Users/sam/Projects/Coverage/.build/checkouts/Arguments/Package.swift";
          sourceTree = "<group>";
       };
       "OBJ_21" = {
@@ -1115,7 +1115,7 @@
             "OBJ_22",
             "OBJ_38"
          );
-         name = "Docopt";
+         name = "Docopt 0.6.10";
          path = "";
          sourceTree = "SOURCE_ROOT";
       };
@@ -1139,7 +1139,7 @@
             "OBJ_37"
          );
          name = "Docopt";
-         path = "Packages/docopt.swift/Sources/Docopt";
+         path = ".build/checkouts/docopt.swift/Sources/Docopt";
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_23" = {
@@ -1262,7 +1262,7 @@
          isa = "PBXFileReference";
          explicitFileType = "sourcecode.swift";
          name = "Package.swift";
-         path = "/Users/sam/Projects/Coverage/Packages/docopt.swift/Package.swift";
+         path = "/Users/sam/Projects/Coverage/.build/checkouts/docopt.swift/Package.swift";
          sourceTree = "<group>";
       };
       "OBJ_39" = {
@@ -1271,9 +1271,10 @@
             "OBJ_40",
             "OBJ_41",
             "OBJ_49",
-            "OBJ_50"
+            "OBJ_50",
+            "OBJ_51"
          );
-         name = "Logger 1.1.1";
+         name = "Logger 1.3.2";
          path = "";
          sourceTree = "SOURCE_ROOT";
       };
@@ -1339,17 +1340,17 @@
       };
       "OBJ_42" = {
          isa = "PBXFileReference";
-         path = "Context.swift";
+         path = "Channel.swift";
          sourceTree = "<group>";
       };
       "OBJ_43" = {
          isa = "PBXFileReference";
-         path = "Handler.swift";
+         path = "Context.swift";
          sourceTree = "<group>";
       };
       "OBJ_44" = {
          isa = "PBXFileReference";
-         path = "Logger.swift";
+         path = "Handler.swift";
          sourceTree = "<group>";
       };
       "OBJ_45" = {
@@ -1376,8 +1377,8 @@
          isa = "PBXGroup";
          children = (
          );
-         name = "LoggerTestSupport";
-         path = ".build/checkouts/Logger-163420cc/Sources/LoggerTestSupport";
+         name = "LoggerKit";
+         path = ".build/checkouts/Logger-163420cc/Sources/LoggerKit";
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_5" = {
@@ -1387,8 +1388,7 @@
             "OBJ_7",
             "OBJ_12",
             "OBJ_16",
-            "OBJ_55",
-            "OBJ_62",
+            "OBJ_56",
             "OBJ_63",
             "OBJ_64"
          );
@@ -1396,52 +1396,60 @@
          sourceTree = "<group>";
       };
       "OBJ_50" = {
+         isa = "PBXGroup";
+         children = (
+         );
+         name = "LoggerTestSupport";
+         path = ".build/checkouts/Logger-163420cc/Sources/LoggerTestSupport";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_51" = {
          isa = "PBXFileReference";
          explicitFileType = "sourcecode.swift";
          name = "Package.swift";
          path = "/Users/sam/Projects/Coverage/.build/checkouts/Logger-163420cc/Package.swift";
          sourceTree = "<group>";
       };
-      "OBJ_51" = {
+      "OBJ_52" = {
          isa = "PBXGroup";
          children = (
-            "OBJ_52",
-            "OBJ_54"
+            "OBJ_53",
+            "OBJ_55"
          );
          name = "Runner 1.0.1";
          path = "";
          sourceTree = "SOURCE_ROOT";
       };
-      "OBJ_52" = {
+      "OBJ_53" = {
          isa = "PBXGroup";
          children = (
-            "OBJ_53"
+            "OBJ_54"
          );
          name = "Runner";
          path = ".build/checkouts/Runner-1fb10788/Sources/Runner";
          sourceTree = "SOURCE_ROOT";
       };
-      "OBJ_53" = {
+      "OBJ_54" = {
          isa = "PBXFileReference";
          path = "Runner.swift";
          sourceTree = "<group>";
       };
-      "OBJ_54" = {
+      "OBJ_55" = {
          isa = "PBXFileReference";
          explicitFileType = "sourcecode.swift";
          name = "Package.swift";
          path = "/Users/sam/Projects/Coverage/.build/checkouts/Runner-1fb10788/Package.swift";
          sourceTree = "<group>";
       };
-      "OBJ_55" = {
+      "OBJ_56" = {
          isa = "PBXGroup";
          children = (
-            "Logger::Logger::Product",
-            "Coverage::CoverageTests::Product",
-            "Arguments::Arguments::Product",
             "Coverage::Coverage::Product",
+            "Coverage::CoverageTests::Product",
             "Docopt::Docopt::Product",
-            "Runner::Runner::Product"
+            "Runner::Runner::Product",
+            "Logger::Logger::Product",
+            "Arguments::Arguments::Product"
          );
          name = "Products";
          path = "";
@@ -1453,14 +1461,9 @@
          path = "Package.swift";
          sourceTree = "<group>";
       };
-      "OBJ_62" = {
-         isa = "PBXFileReference";
-         path = "Coverage.xcworkspace";
-         sourceTree = "SOURCE_ROOT";
-      };
       "OBJ_63" = {
          isa = "PBXFileReference";
-         path = "Packages";
+         path = "Coverage.xcworkspace";
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_64" = {

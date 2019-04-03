@@ -10,7 +10,7 @@ let package = Package(
         ],
     dependencies: [
         .package(url: "https://github.com/elegantchaos/Runner.git", from: "1.0.1"),
-        .package(url: "https://github.com/elegantchaos/Arguments.git", from: "1.0.6"),
+        .package(url: "https://github.com/elegantchaos/Arguments.git", from: "1.0.7"),
     ],
     targets: [
         .target(
