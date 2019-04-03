@@ -49,7 +49,7 @@ final class CoverageTests: XCTestCase {
 
     func testMissingResults() throws {
         let (status, _) = try runCoverage(["Coverage"], results: URL(fileURLWithPath: "/"))
-        XCTAssertEqual(status, )
+        XCTAssertEqual(status, 100)
     }
     
 
