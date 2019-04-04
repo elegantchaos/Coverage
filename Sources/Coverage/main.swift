@@ -100,7 +100,7 @@ let threshold = (thresholdString as NSString).doubleValue
 let parser = XCodeResultParser()
 let result: ReturnCode
 if let results = parser.parse(results: URL(fileURLWithPath: path)) {
-    result = report(for: results.coveragePath, target: target, showFiles: showFiles, showTargets: showTargets, threshold: threshold)
+    result = report(for: results.coverageURL, target: target, showFiles: showFiles, showTargets: showTargets, threshold: threshold)
 } else {
     result = .badArguments
 }

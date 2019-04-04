@@ -1106,7 +1106,7 @@
          isa = "PBXFileReference";
          explicitFileType = "sourcecode.swift";
          name = "Package.swift";
-         path = "/Users/sam/Projects/Coverage/.build/checkouts/Arguments/Package.swift";
+         path = "/Users/sam/Projects/Bookish/Dependencies/BookishModel/Packages/Coverage/.build/checkouts/Arguments/Package.swift";
          sourceTree = "<group>";
       };
       "OBJ_21" = {
@@ -1262,7 +1262,7 @@
          isa = "PBXFileReference";
          explicitFileType = "sourcecode.swift";
          name = "Package.swift";
-         path = "/Users/sam/Projects/Coverage/.build/checkouts/docopt.swift/Package.swift";
+         path = "/Users/sam/Projects/Bookish/Dependencies/BookishModel/Packages/Coverage/.build/checkouts/docopt.swift/Package.swift";
          sourceTree = "<group>";
       };
       "OBJ_39" = {
@@ -1320,7 +1320,7 @@
          children = (
          );
          name = "Example";
-         path = ".build/checkouts/Logger-163420cc/Sources/Example";
+         path = ".build/checkouts/Logger/Sources/Example";
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_41" = {
@@ -1335,7 +1335,7 @@
             "OBJ_48"
          );
          name = "Logger";
-         path = ".build/checkouts/Logger-163420cc/Sources/Logger";
+         path = ".build/checkouts/Logger/Sources/Logger";
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_42" = {
@@ -1378,7 +1378,7 @@
          children = (
          );
          name = "LoggerKit";
-         path = ".build/checkouts/Logger-163420cc/Sources/LoggerKit";
+         path = ".build/checkouts/Logger/Sources/LoggerKit";
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_5" = {
@@ -1400,14 +1400,14 @@
          children = (
          );
          name = "LoggerTestSupport";
-         path = ".build/checkouts/Logger-163420cc/Sources/LoggerTestSupport";
+         path = ".build/checkouts/Logger/Sources/LoggerTestSupport";
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_51" = {
          isa = "PBXFileReference";
          explicitFileType = "sourcecode.swift";
          name = "Package.swift";
-         path = "/Users/sam/Projects/Coverage/.build/checkouts/Logger-163420cc/Package.swift";
+         path = "/Users/sam/Projects/Bookish/Dependencies/BookishModel/Packages/Coverage/.build/checkouts/Logger/Package.swift";
          sourceTree = "<group>";
       };
       "OBJ_52" = {
@@ -1426,7 +1426,7 @@
             "OBJ_54"
          );
          name = "Runner";
-         path = ".build/checkouts/Runner-1fb10788/Sources/Runner";
+         path = ".build/checkouts/Runner/Sources/Runner";
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_54" = {
@@ -1438,18 +1438,18 @@
          isa = "PBXFileReference";
          explicitFileType = "sourcecode.swift";
          name = "Package.swift";
-         path = "/Users/sam/Projects/Coverage/.build/checkouts/Runner-1fb10788/Package.swift";
+         path = "/Users/sam/Projects/Bookish/Dependencies/BookishModel/Packages/Coverage/.build/checkouts/Runner/Package.swift";
          sourceTree = "<group>";
       };
       "OBJ_56" = {
          isa = "PBXGroup";
          children = (
+            "Runner::Runner::Product",
             "Coverage::Coverage::Product",
+            "Arguments::Arguments::Product",
             "Coverage::CoverageTests::Product",
             "Docopt::Docopt::Product",
-            "Runner::Runner::Product",
-            "Logger::Logger::Product",
-            "Arguments::Arguments::Product"
+            "Logger::Logger::Product"
          );
          name = "Products";
          path = "";
