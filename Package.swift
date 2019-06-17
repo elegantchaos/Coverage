@@ -9,8 +9,8 @@ let package = Package(
         .executable(name: "coverage", targets: ["Coverage"]),
         ],
     dependencies: [
-        .package(url: "https://github.com/elegantchaos/Runner.git", from: "1.0.1"),
-        .package(url: "https://github.com/elegantchaos/Arguments.git", from: "1.0.7"),
+        .package(url: "https://github.com/elegantchaos/Runner.git", from: "1.0.2"),
+        .package(url: "https://github.com/elegantchaos/Arguments.git", from: "1.0.8"),
     ],
     targets: [
         .target(
