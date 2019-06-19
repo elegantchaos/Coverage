@@ -1,6 +1,7 @@
 import Foundation
 import Runner
 import Arguments
+import Logger
 
 let documentation = """
 Interpret XCode code coverage results.
@@ -40,7 +41,7 @@ func report(for url: URL, target filter: String = "", showFiles: Bool = false, s
     var status = ReturnCode.ok
     let xcrunURL = URL(fileURLWithPath: "/usr/bin/xcrun")
     let runner = Runner(for: xcrunURL)
-    
+
     if let result = try? runner.sync(arguments: ["xccov", "view", url.path, "--json"]), result.status == 0 {
         let parser = CodeCoverageParser()
         if let report = parser.parse(result.stdout) {
@@ -86,11 +87,14 @@ func report(for url: URL, target filter: String = "", showFiles: Bool = false, s
             }
         }
     }
-    
+
     return status
 }
 
-let a = Arguments(documentation: documentation, version: "1.0")
+// TODO: conver to using CommandShell
+
+let filtered = Manager.removeLoggingOptions(from: CommandLine.arguments)
+let a = Arguments(documentation: documentation, version: "1.0", arguments: filtered)
 let path = a.argument("results-path")
 let target = a.argument("target")
 let showFiles = a.flag("printFiles")
@@ -106,4 +110,3 @@ if let results = parser.parse(results: URL(fileURLWithPath: path)) {
 }
 
 exit(result.rawValue)
-
